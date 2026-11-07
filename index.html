@@ -3,181 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdelrahman Walid | Portfolio</title>
+    <title>Abdelrahman Walid | AI & Full-Stack Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
                     colors: {
-                        darkBg: '#0a0a0f',
-                        cardBg: '#12121a',
-                        brandFocus: '#8b5cf6',
+                        obsidian: '#030706',
+                        panel: '#09110e',
+                        neon: '#10b981',
+                        cyanNeon: '#06b6d4',
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* خلفية الشبكة التقنية */
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+        }
+        /* تأثير توهج النيون */
+        .neon-glow {
+            box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.35);
+        }
+        /* حركة الكود في الخلفية */
+        @keyframes scrollCode {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .animate-code-scroll {
+            animation: scrollCode 45s linear infinite;
+        }
+    </style>
 </head>
-<body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-brandFocus selection:text-white">
+<body class="bg-obsidian text-zinc-300 font-sans antialiased selection:bg-neon selection:text-obsidian relative overflow-x-hidden cyber-grid">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-zinc-800/50">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="font-bold text-xl tracking-tighter text-white hover:text-brandFocus transition-colors">
-                Abdelrahman<span class="text-brandFocus">.dev</span>
+    <!-- خلفية كود server.ts الحقيقية المتحركة -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.08]">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between gap-12 font-mono text-xs text-neon leading-relaxed select-none">
+            <pre id="bg-code-left" class="animate-code-scroll whitespace-pre-wrap w-1/2"></pre>
+            <pre id="bg-code-right" class="animate-code-scroll whitespace-pre-wrap w-1/2 hidden md:block" style="animation-duration: 60s;"></pre>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
+    </div>
+
+    <!-- شريط التنقل (Navbar) -->
+    <nav class="fixed top-0 w-full z-50 bg-obsidian/80 backdrop-blur-xl border-b border-emerald-950/80">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-mono font-bold text-lg tracking-tight text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-sm bg-neon animate-pulse"></span>
+                ABDO<span class="text-neon">_WALID</span><span class="text-cyanNeon text-xs font-normal">.ts</span>
             </a>
-            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
-                <a href="#projects" class="hover:text-zinc-100 transition-colors">Projects</a>
-                <a href="#skills" class="hover:text-zinc-100 transition-colors">Skills</a>
-                <a href="https://github.com/ABDO000WALID" target="_blank" class="hover:text-zinc-100 transition-colors">GitHub</a>
+            <div class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-zinc-400">
+                <a href="#engine" class="hover:text-neon transition-colors">/Live_Engine</a>
+                <a href="#projects" class="hover:text-neon transition-colors">/Projects</a>
+                <a href="#skills" class="hover:text-neon transition-colors">/Arsenal</a>
+                <a href="https://github.com/ABDO000WALID" target="_blank" class="hover:text-neon transition-colors">/GitHub</a>
             </div>
-            <a href="Abdelrahman%20CV.pdf" download class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-100 text-sm font-medium transition-all border border-zinc-700">
-                Download CV
+            <a href="Abdelrahman%20CV.pdf" download class="px-4 py-2 rounded-lg bg-emerald-950/60 hover:bg-neon hover:text-obsidian text-neon font-mono text-xs font-bold transition-all border border-neon/40">
+                [ Download_CV.pdf ]
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brandFocus/20 rounded-full blur-[100px] -z-10"></div>
-        
-        <div class="max-w-3xl mx-auto text-center space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandFocus/10 border border-brandFocus/20 text-brandFocus text-xs font-mono mb-4">
-                <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandFocus opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brandFocus"></span>
-                </span>
-                CS Student & AI-Empowered Developer
+    <!-- الواجهة الرئيسية (Hero Section) -->
+    <section class="relative z-10 min-h-screen flex items-center justify-center pt-24 pb-16 px-6">
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-neon/10 rounded-full blur-[130px] -z-10"></div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- النص التعريفي -->
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md bg-emerald-950/50 border border-neon/30 text-neon text-xs font-mono">
+                    <span class="h-2 w-2 rounded-full bg-neon animate-ping"></span>
+                    <span>SYSTEM ONLINE // AI ORCHESTRATOR & FULL-STACK</span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+                    Engineering Intelligent Systems: <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon via-emerald-300 to-cyanNeon">Abdelrahman Walid</span>
+                </h1>
+
+                <p class="text-zinc-400 text-base md:text-lg leading-relaxed">
+                    2nd-year Computer Science student at <strong class="text-white">EELU</strong>. I architect resilient Full-Stack applications powered by <strong class="text-neon">Multi-Model AI Failover</strong>, real-time Function Calling, and cloud synchronization.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2 font-mono text-xs">
+                    <a href="#projects" class="px-6 py-3.5 rounded-lg bg-neon hover:bg-emerald-400 text-obsidian font-bold transition-all neon-glow">
+                        &gt; DEPLOYED_PROJECTS
+                    </a>
+                    <a href="https://wa.me/201029450215" target="_blank" class="px-6 py-3.5 rounded-lg bg-panel hover:bg-zinc-900 border border-zinc-800 hover:border-cyanNeon/50 text-cyanNeon font-semibold transition-all">
+                        PING_WHATSAPP()
+                    </a>
+                </div>
             </div>
-            
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">Abdelrahman Walid</span>
-            </h1>
-            
-            <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                A 2nd-year Computer Science student at EELU. I specialize in Full-Stack development and <strong class="text-zinc-200">AI Orchestration</strong> to build fast, intelligent, and scalable web applications.
-            </p>
-            
-            <div class="flex flex-wrap items-center justify-center gap-4 pt-8">
-                <a href="#projects" class="px-6 py-3 rounded-xl bg-brandFocus hover:bg-violet-600 text-white font-medium text-sm transition-all shadow-lg shadow-brandFocus/20">
-                    Explore My Work
-                </a>
-                <a href="mailto:2006mohamed2021@gmail.com" class="px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-medium text-sm transition-all">
-                    Contact Me
-                </a>
+
+            <!-- شاشة الباك إند الحية (Live server.ts Simulator) -->
+            <div id="engine" class="lg:col-span-5 rounded-xl bg-panel/90 border border-neon/30 shadow-2xl overflow-hidden backdrop-blur-md">
+                <div class="px-4 py-2.5 bg-black/60 border-b border-zinc-800 flex items-center justify-between font-mono text-[11px]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-neon"></span>
+                        <span class="text-zinc-400 ml-2">server.ts — AI Failover Engine</span>
+                    </div>
+                    <span class="text-neon animate-pulse">● LIVE</span>
+                </div>
+                <div class="p-4 font-mono text-xs space-y-2 h-80 overflow-y-auto text-zinc-300" id="terminal-output">
+                    <!-- يمتلئ تلقائياً بالجافاسكريبت من كود server.ts -->
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 border-t border-zinc-800/40">
+    <!-- قسم المشاريع (Projects Section) -->
+    <section id="projects" class="relative z-10 py-24 px-6 border-t border-emerald-950/60">
         <div class="max-w-5xl mx-auto space-y-16">
-            <div class="text-center space-y-3">
-                <h2 class="text-3xl font-bold tracking-tight text-white">Featured Projects</h2>
-                <p class="text-zinc-400 text-sm md:text-base">Real-world applications built with AI workflows, modern frameworks, and cloud integration.</p>
+            <div class="space-y-2">
+                <span class="font-mono text-xs text-cyanNeon uppercase tracking-widest">// PRODUCTION_BUILDS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Architecture & Projects</h2>
             </div>
 
             <!-- Project 1: NOVO -->
-            <div class="rounded-2xl bg-cardBg border border-zinc-800/70 p-6 md:p-8 space-y-6">
-                <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="rounded-2xl bg-panel/90 border border-neon/30 p-6 md:p-8 space-y-6 backdrop-blur-md shadow-xl">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800/80 pb-5">
                     <div>
                         <div class="flex items-center gap-3">
-                            <h3 class="text-2xl font-bold text-white">NOVO - Personal Intelligence OS</h3>
-                            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-950/60 text-emerald-400 border border-emerald-800/40">Live Demo</span>
+                            <h3 class="text-2xl font-bold text-white font-mono">NOVO_OS</h3>
+                            <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-neon/15 text-neon border border-neon/40">v2.0 Live on Render</span>
                         </div>
-                        <p class="text-zinc-400 text-sm mt-1">Full-Stack Developer / AI Orchestrator</p>
+                        <p class="text-zinc-400 text-sm mt-1">Bilingual Personal Intelligence OS — Tasks, Finance, Knowledge Vault, Focus Timer & AI Orchestrator</p>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <a href="https://novo-app.onrender.com" target="_blank" class="px-4 py-2 rounded-lg bg-brandFocus hover:bg-violet-600 text-white text-xs font-medium transition-all">Live App</a>
-                        <a href="https://github.com/ABDO000WALID" target="_blank" class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-medium transition-all border border-zinc-700">GitHub</a>
+                    <div class="flex items-center gap-3 font-mono text-xs">
+                        <a href="https://novo-app.onrender.com" target="_blank" class="px-4 py-2.5 rounded-lg bg-neon hover:bg-emerald-400 text-obsidian font-bold transition-all">Launch Live App ↗</a>
+                        <a href="https://github.com/ABDO000WALID/novo-personal-intelligence-os" target="_blank" class="px-4 py-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 transition-all">Source Code</a>
                     </div>
                 </div>
 
-                <div class="w-full aspect-video rounded-xl overflow-hidden bg-black/60 border border-zinc-800/50">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/NHrLg9f7ykA" title="NOVO Demo Video" allowfullscreen></iframe>
+                <!-- شاشة الفيديو -->
+                <div class="w-full aspect-video rounded-xl overflow-hidden bg-black border border-zinc-800 relative">
+                    <!-- استبدل NHrLg9f7ykA بالـ ID الخاص بفيديو NOVO الجديد بعد رفعه على يوتيوب -->
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/NHrLg9f7ykA" title="NOVO System Walkthrough" allowfullscreen></iframe>
                 </div>
 
-                <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
-                    <p>• Built a robust, real-time AI productivity assistant for managing tasks, goals, and daily schedules.</p>
-                    <p>• Implemented secure authentication flows and real-time database synchronization using Firebase.</p>
-                    <p>• Engineered Function Calling algorithms using Gemini API to translate natural language into actionable UI tasks.</p>
-                    <p>• Managed local state (Zustand) and deployed on Render, resolving dependency and deployment challenges.</p>
+                <!-- تفاصيل الهندسة البرمجية في NOVO -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-zinc-300 pt-2">
+                    <div class="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+                        <h4 class="font-mono text-xs text-neon font-bold">&gt; Dynamic Model Health & Failover</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Engineered a state-machine in Express (`HEALTHY`, `COOLDOWN`, `PROBING`) that auto-discovers Gemini models and reroutes failed requests seamlessly.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+                        <h4 class="font-mono text-xs text-cyanNeon font-bold">&gt; Temporal Function Calling</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Integrated `create_task` tool declarations allowing the Arabic AI assistant to parse relative dates ("بكرة" / "اليوم") and mutate planner state directly.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+                        <h4 class="font-mono text-xs text-neon font-bold">&gt; All-in-One Workspace</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Includes Personal Finance ledger, Knowledge Base, Auto-saving Notes, Pomodoro/Stopwatch Focus Timer, and Velocity Score analytics.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+                        <h4 class="font-mono text-xs text-cyanNeon font-bold">&gt; Cloud Sync & Bilingual UI</h4>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Built with React 19, TypeScript, Zustand, and Firebase (Auth & Firestore) with instant RTL (Arabic) and LTR (English) switching.</p>
+                    </div>
                 </div>
 
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">React</span>
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Zustand</span>
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Node.js</span>
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Firebase</span>
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Google Gemini API</span>
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Render</span>
+                <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs">
+                    <span class="px-3 py-1 rounded bg-emerald-950/40 border border-neon/30 text-neon">TypeScript</span>
+                    <span class="px-3 py-1 rounded bg-emerald-950/40 border border-neon/30 text-neon">React 19</span>
+                    <span class="px-3 py-1 rounded bg-emerald-950/40 border border-neon/30 text-neon">Node.js / Express</span>
+                    <span class="px-3 py-1 rounded bg-emerald-950/40 border border-neon/30 text-neon">Google GenAI SDK</span>
+                    <span class="px-3 py-1 rounded bg-emerald-950/40 border border-neon/30 text-neon">Zustand</span>
+                    <span class="px-3 py-1 rounded bg-emerald-950/40 border border-neon/30 text-neon">Firebase</span>
                 </div>
             </div>
 
             <!-- Project 2: Dawaak -->
-            <div class="rounded-2xl bg-cardBg border border-zinc-800/70 p-6 md:p-8 space-y-6">
+            <div class="rounded-2xl bg-panel/90 border border-cyanNeon/30 p-6 md:p-8 space-y-5 backdrop-blur-md">
                 <div class="flex flex-wrap items-center justify-between gap-4">
                     <div>
                         <div class="flex items-center gap-3">
-                            <h3 class="text-2xl font-bold text-white">Dawaak - E-Pharmacy Platform</h3>
-                            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-amber-950/60 text-amber-400 border border-amber-800/40">In Development</span>
+                            <h3 class="text-2xl font-bold text-white font-mono">Dawaak (دواءك)</h3>
+                            <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-cyan-950/60 text-cyanNeon border border-cyanNeon/40">Active Development</span>
                         </div>
-                        <p class="text-zinc-400 text-sm mt-1">AI Prompt Engineer / Developer</p>
+                        <p class="text-zinc-400 text-sm mt-1">AI Prompt Engineer / Developer — E-Pharmacy Platform</p>
                     </div>
                 </div>
 
-                <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
-                    <p>• Participated in developing an online pharmacy web application.</p>
-                    <p>• Utilized advanced AI agents (Antigravity/Teamwork workflows) to architect and generate functional code modules.</p>
-                    <p>• Structured logic and prompts to build UI components, shopping flows, and user actions.</p>
+                <div class="space-y-2 text-sm text-zinc-400 leading-relaxed">
+                    <p>• Directed multi-agent AI workflows (Antigravity) to architect modular shopping flows, medicine catalogs, and user checkout components.</p>
+                    <p>• Structured strict prompt engineering pipelines to generate, validate, and debug production-ready frontend modules.</p>
                 </div>
 
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">AI Agents (Antigravity)</span>
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Prompt Engineering</span>
-                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">UI Architecture</span>
+                <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                    <span class="px-3 py-1 rounded bg-cyan-950/40 border border-cyanNeon/30 text-cyanNeon">AI Agents (Antigravity)</span>
+                    <span class="px-3 py-1 rounded bg-cyan-950/40 border border-cyanNeon/30 text-cyanNeon">Prompt Architecture</span>
+                    <span class="px-3 py-1 rounded bg-cyan-950/40 border border-cyanNeon/30 text-cyanNeon">UI Components</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills & Education Section -->
-    <section id="skills" class="py-24 px-6 border-t border-zinc-800/40">
+    <!-- قسم المهارات والتعليم (Skills Section) -->
+    <section id="skills" class="relative z-10 py-24 px-6 border-t border-emerald-950/60">
         <div class="max-w-5xl mx-auto space-y-12">
-            <div class="text-center space-y-3">
-                <h2 class="text-3xl font-bold tracking-tight text-white">Technical Skills & Education</h2>
-                <p class="text-zinc-400 text-sm md:text-base">Bachelor's Degree in Computers and Information — EELU (Expected: 2029)</p>
+            <div class="space-y-2">
+                <span class="font-mono text-xs text-neon uppercase tracking-widest">// TECHNICAL_STACK</span>
+                <h2 class="text-3xl font-bold text-white">Skills & Academic Foundation</h2>
+                <p class="text-zinc-400 text-sm">B.Sc. in Computers and Information — Egyptian E-Learning University (EELU) | Expected 2029</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-xl bg-cardBg border border-zinc-800/60 space-y-3">
-                    <h3 class="text-white font-semibold text-base">Programming Languages</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Python</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">C++</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">JavaScript / TS (Basics)</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono">
+                <div class="p-6 rounded-xl bg-panel/90 border border-zinc-800 hover:border-neon/50 transition-all space-y-4">
+                    <h3 class="text-neon font-bold text-sm">// 01. LANGUAGES</h3>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">Python</span>
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">C++</span>
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">JavaScript / TypeScript</span>
                     </div>
                 </div>
 
-                <div class="p-6 rounded-xl bg-cardBg border border-zinc-800/60 space-y-3">
-                    <h3 class="text-white font-semibold text-base">Web Technologies & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">React (Basics)</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Firebase (Auth, Firestore)</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">RESTful APIs</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Git</span>
+                <div class="p-6 rounded-xl bg-panel/90 border border-zinc-800 hover:border-cyanNeon/50 transition-all space-y-4">
+                    <h3 class="text-cyanNeon font-bold text-sm">// 02. WEB & CLOUD</h3>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">React & Zustand</span>
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">Node.js & Express</span>
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">Firebase (Auth/Firestore)</span>
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">Git & Render</span>
                     </div>
                 </div>
 
-                <div class="p-6 rounded-xl bg-cardBg border border-zinc-800/60 space-y-3">
-                    <h3 class="text-white font-semibold text-base">Modern Workflows & General</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Prompt Engineering</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">AI Orchestration</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Debugging AI Code</span>
-                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Computer Networks Basics</span>
+                <div class="p-6 rounded-xl bg-panel/90 border border-zinc-800 hover:border-neon/50 transition-all space-y-4">
+                    <h3 class="text-neon font-bold text-sm">// 03. AI ENGINEERING</h3>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">AI Orchestration</span>
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">Gemini Function Calling</span>
+                        <span class="px-2.5 py-1.5 rounded bg-black border border-zinc-800 text-zinc-200">Prompt Engineering</span>
                     </div>
                 </div>
             </div>
@@ -185,14 +253,108 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-zinc-800/40 text-center text-xs text-zinc-500 space-y-4">
-        <p>© 2026 Abdelrahman Walid Ahmed Mohamed. Built with modern AI orchestration.</p>
-        <div class="flex justify-center items-center gap-6">
-            <a href="mailto:2006mohamed2021@gmail.com" class="hover:text-zinc-300 transition-colors">Email</a>
-            <a href="https://wa.me/201029450215" target="_blank" class="hover:text-zinc-300 transition-colors">WhatsApp</a>
-            <a href="https://github.com/ABDO000WALID" target="_blank" class="hover:text-zinc-300 transition-colors">GitHub</a>
+    <footer class="relative z-10 py-12 px-6 border-t border-emerald-950/60 text-center font-mono text-xs text-zinc-500 space-y-4">
+        <p>SYSTEM ARCHITECT: ABDELRAHMAN WALID AHMED MOHAMED © 2026</p>
+        <div class="flex justify-center items-center gap-6 text-zinc-400">
+            <a href="mailto:2006mohamed2021@gmail.com" class="hover:text-neon transition-colors">2006mohamed2021@gmail.com</a>
+            <a href="https://wa.me/201029450215" target="_blank" class="hover:text-neon transition-colors">+201029450215</a>
+            <a href="https://github.com/ABDO000WALID" target="_blank" class="hover:text-neon transition-colors">GitHub</a>
         </div>
     </footer>
 
+    <!-- سكريبت تشغيل كود server.ts الحقيقي في الخلفية والـ Terminal -->
+    <script>
+        const realServerCode = `import express from 'express';
+import { GoogleGenAI } from '@google/genai';
+import { requireAuth, rateLimiter } from './server/authMiddleware.ts';
+
+const MODEL_STATE_HEALTHY = 'HEALTHY';
+const MODEL_STATE_COOLDOWN = 'COOLDOWN';
+const MODEL_STATE_PROBING = 'PROBING';
+const modelHealth = {};
+
+async function discoverAvailableModels(apiKey) {
+  const ai = new GoogleGenAI({ apiKey });
+  const response = await ai.models.list();
+  const available = [];
+  for await (const model of response) {
+    if (model.supportedActions?.includes('generateContent')) {
+      const name = (model.name || '').replace('models/', '');
+      if (name.includes('flash') || name.includes('pro')) {
+        available.push(name);
+      }
+    }
+  }
+  return available;
+}
+
+function getHealthyModels(availableModels, envModel) {
+  const now = Date.now();
+  return availableModels.filter(m => {
+    const h = modelHealth[m];
+    if (!h || h.state === MODEL_STATE_HEALTHY) return true;
+    if (h.state === MODEL_STATE_COOLDOWN && now >= h.cooldownUntil) {
+      h.state = MODEL_STATE_PROBING;
+      return true;
+    }
+    return false;
+  });
+}
+
+app.post('/api/ai/chat', requireAuth, rateLimiter, async (req, res) => {
+  const { prompt, context, history } = req.body;
+  const modelsToTry = getHealthyModels(availableModels);
+  const tools = [{
+    functionDeclarations: [{
+      name: "create_task",
+      parameters: { properties: { title: { type: "STRING" }, date: { type: "STRING" } } }
+    }]
+  }];
+  const response = await ai.models.generateContent({
+    model: currentModel,
+    contents,
+    config: { systemInstruction: enrichedSystemInstruction, tools }
+  });
+  return res.json({ text: response.text, functionCalls: response.functionCalls });
+});`;
+
+        // تكرار الكود في الخلفية ليتحرك باستمرار
+        document.getElementById('bg-code-left').textContent = realServerCode + "\n\n" + realServerCode;
+        document.getElementById('bg-code-right').textContent = realServerCode + "\n\n" + realServerCode;
+
+        // محاكاة حية لـ server.ts في شاشة الـ Terminal
+        const logs = [
+            { text: "> [BOOT] Starting NOVO Express Server on 0.0.0.0:3000...", color: "text-zinc-400" },
+            { text: "> [MODEL DISCOVERY] Scanning @google/genai models...", color: "text-cyanNeon" },
+            { text: "> [HEALTHY] Registered: gemini-2.5-flash, gemini-2.0-flash, gemini-2.5-pro", color: "text-neon" },
+            { text: "> [AUTH] Firebase token verified: 14bdol14@gmail.com", color: "text-zinc-300" },
+            { text: "> POST /api/ai/chat — Prompt: 'ضيفلي مهمه مراجعه لغه عربيه بكره'", color: "text-amber-300" },
+            { text: "> [ORCHESTRATOR] Injecting temporal context: Today = 2026-11-07", color: "text-zinc-400" },
+            { text: "> [TOOL_CALL] Executing function: create_task({ title: 'مراجعه لغه عربيه', date: '2026-11-08' })", color: "text-cyanNeon" },
+            { text: "> [STATE_SYNC] Zustand store & Firestore updated (200 OK)", color: "text-neon font-bold" }
+        ];
+
+        const terminal = document.getElementById('terminal-output');
+        let idx = 0;
+
+        function pushLog() {
+            if (idx >= logs.length) {
+                setTimeout(() => {
+                    terminal.innerHTML = '';
+                    idx = 0;
+                    pushLog();
+                }, 4000);
+                return;
+            }
+            const div = document.createElement('div');
+            div.className = `${logs[idx].color} transition-opacity duration-300`;
+            div.textContent = logs[idx].text;
+            terminal.appendChild(div);
+            terminal.scrollTop = terminal.scrollHeight;
+            idx++;
+            setTimeout(pushLog, 1100);
+        }
+        pushLog();
+    </script>
 </body>
 </html>
