@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdelrahman Walid | Portfolio</title>
-    <!-- استدعاء Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,7 +13,7 @@
                     colors: {
                         darkBg: '#0a0a0f',
                         cardBg: '#12121a',
-                        brandFocus: '#8b5cf6', // لون بنفسجي ليتماشى مع روح الـ AI
+                        brandFocus: '#8b5cf6',
                     }
                 }
             }
@@ -23,7 +22,7 @@
 </head>
 <body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-brandFocus selection:text-white">
 
-    <!-- شريط التنقل (Navbar) -->
+    <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-zinc-800/50">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="font-bold text-xl tracking-tighter text-white hover:text-brandFocus transition-colors">
@@ -34,20 +33,17 @@
                 <a href="#skills" class="hover:text-zinc-100 transition-colors">Skills</a>
                 <a href="https://github.com/ABDO000WALID" target="_blank" class="hover:text-zinc-100 transition-colors">GitHub</a>
             </div>
-            <!-- زرار تحميل السيرة الذاتية -->
-            <a href="Abdelrahman_CV.pdf" download class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-100 text-sm font-medium transition-all border border-zinc-700">
+            <a href="Abdelrahman%20CV.pdf" download class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-100 text-sm font-medium transition-all border border-zinc-700">
                 Download CV
             </a>
         </div>
     </nav>
 
-    <!-- الواجهة الرئيسية (Hero Section) -->
+    <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
-        <!-- تأثير إضاءة خفيف في الخلفية -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brandFocus/20 rounded-full blur-[100px] -z-10"></div>
         
         <div class="max-w-3xl mx-auto text-center space-y-6">
-            <!-- شارة التخصص -->
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandFocus/10 border border-brandFocus/20 text-brandFocus text-xs font-mono mb-4">
                 <span class="relative flex h-2 w-2">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandFocus opacity-75"></span>
@@ -75,10 +71,128 @@
         </div>
     </section>
 
-    <!-- مكان قسم المشاريع اللي هنضيفه الخطوة الجاية -->
-    <main id="projects">
-        <!-- Projects will go here -->
-    </main>
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 border-t border-zinc-800/40">
+        <div class="max-w-5xl mx-auto space-y-16">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Featured Projects</h2>
+                <p class="text-zinc-400 text-sm md:text-base">Real-world applications built with AI workflows, modern frameworks, and cloud integration.</p>
+            </div>
+
+            <!-- Project 1: NOVO -->
+            <div class="rounded-2xl bg-cardBg border border-zinc-800/70 p-6 md:p-8 space-y-6">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <h3 class="text-2xl font-bold text-white">NOVO - Personal Intelligence OS</h3>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-950/60 text-emerald-400 border border-emerald-800/40">Live Demo</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm mt-1">Full-Stack Developer / AI Orchestrator</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="https://novo-app.onrender.com" target="_blank" class="px-4 py-2 rounded-lg bg-brandFocus hover:bg-violet-600 text-white text-xs font-medium transition-all">Live App</a>
+                        <a href="https://github.com/ABDO000WALID" target="_blank" class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-medium transition-all border border-zinc-700">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="w-full aspect-video rounded-xl overflow-hidden bg-black/60 border border-zinc-800/50">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/NHrLg9f7ykA" title="NOVO Demo Video" allowfullscreen></iframe>
+                </div>
+
+                <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
+                    <p>• Built a robust, real-time AI productivity assistant for managing tasks, goals, and daily schedules.</p>
+                    <p>• Implemented secure authentication flows and real-time database synchronization using Firebase.</p>
+                    <p>• Engineered Function Calling algorithms using Gemini API to translate natural language into actionable UI tasks.</p>
+                    <p>• Managed local state (Zustand) and deployed on Render, resolving dependency and deployment challenges.</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">React</span>
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Zustand</span>
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Node.js</span>
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Firebase</span>
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Google Gemini API</span>
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Render</span>
+                </div>
+            </div>
+
+            <!-- Project 2: Dawaak -->
+            <div class="rounded-2xl bg-cardBg border border-zinc-800/70 p-6 md:p-8 space-y-6">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <h3 class="text-2xl font-bold text-white">Dawaak - E-Pharmacy Platform</h3>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-amber-950/60 text-amber-400 border border-amber-800/40">In Development</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm mt-1">AI Prompt Engineer / Developer</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
+                    <p>• Participated in developing an online pharmacy web application.</p>
+                    <p>• Utilized advanced AI agents (Antigravity/Teamwork workflows) to architect and generate functional code modules.</p>
+                    <p>• Structured logic and prompts to build UI components, shopping flows, and user actions.</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">AI Agents (Antigravity)</span>
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">Prompt Engineering</span>
+                    <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">UI Architecture</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Education Section -->
+    <section id="skills" class="py-24 px-6 border-t border-zinc-800/40">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Technical Skills & Education</h2>
+                <p class="text-zinc-400 text-sm md:text-base">Bachelor's Degree in Computers and Information — EELU (Expected: 2029)</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl bg-cardBg border border-zinc-800/60 space-y-3">
+                    <h3 class="text-white font-semibold text-base">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Python</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">C++</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">JavaScript / TS (Basics)</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-cardBg border border-zinc-800/60 space-y-3">
+                    <h3 class="text-white font-semibold text-base">Web Technologies & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">React (Basics)</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Firebase (Auth, Firestore)</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">RESTful APIs</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Git</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-cardBg border border-zinc-800/60 space-y-3">
+                    <h3 class="text-white font-semibold text-base">Modern Workflows & General</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Prompt Engineering</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">AI Orchestration</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Debugging AI Code</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono">Computer Networks Basics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-zinc-800/40 text-center text-xs text-zinc-500 space-y-4">
+        <p>© 2026 Abdelrahman Walid Ahmed Mohamed. Built with modern AI orchestration.</p>
+        <div class="flex justify-center items-center gap-6">
+            <a href="mailto:2006mohamed2021@gmail.com" class="hover:text-zinc-300 transition-colors">Email</a>
+            <a href="https://wa.me/201029450215" target="_blank" class="hover:text-zinc-300 transition-colors">WhatsApp</a>
+            <a href="https://github.com/ABDO000WALID" target="_blank" class="hover:text-zinc-300 transition-colors">GitHub</a>
+        </div>
+    </footer>
 
 </body>
 </html>
