@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelrahman Walid | Portfolio</title>
+    <!-- استدعاء Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0f',
+                        cardBg: '#12121a',
+                        brandFocus: '#8b5cf6', // لون بنفسجي ليتماشى مع روح الـ AI
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-zinc-300 font-sans antialiased selection:bg-brandFocus selection:text-white">
+
+    <!-- شريط التنقل (Navbar) -->
+    <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-zinc-800/50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-xl tracking-tighter text-white hover:text-brandFocus transition-colors">
+                Abdelrahman<span class="text-brandFocus">.dev</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
+                <a href="#projects" class="hover:text-zinc-100 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-zinc-100 transition-colors">Skills</a>
+                <a href="https://github.com/ABDO000WALID" target="_blank" class="hover:text-zinc-100 transition-colors">GitHub</a>
+            </div>
+            <!-- زرار تحميل السيرة الذاتية -->
+            <a href="Abdelrahman_CV.pdf" download class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-100 text-sm font-medium transition-all border border-zinc-700">
+                Download CV
+            </a>
+        </div>
+    </nav>
+
+    <!-- الواجهة الرئيسية (Hero Section) -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <!-- تأثير إضاءة خفيف في الخلفية -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brandFocus/20 rounded-full blur-[100px] -z-10"></div>
+        
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+            <!-- شارة التخصص -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandFocus/10 border border-brandFocus/20 text-brandFocus text-xs font-mono mb-4">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandFocus opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brandFocus"></span>
+                </span>
+                CS Student & AI-Empowered Developer
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">Abdelrahman Walid</span>
+            </h1>
+            
+            <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                A 2nd-year Computer Science student at EELU. I specialize in Full-Stack development and <strong class="text-zinc-200">AI Orchestration</strong> to build fast, intelligent, and scalable web applications.
+            </p>
+            
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-8">
+                <a href="#projects" class="px-6 py-3 rounded-xl bg-brandFocus hover:bg-violet-600 text-white font-medium text-sm transition-all shadow-lg shadow-brandFocus/20">
+                    Explore My Work
+                </a>
+                <a href="mailto:2006mohamed2021@gmail.com" class="px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-medium text-sm transition-all">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- مكان قسم المشاريع اللي هنضيفه الخطوة الجاية -->
+    <main id="projects">
+        <!-- Projects will go here -->
+    </main>
+
+</body>
+</html>
