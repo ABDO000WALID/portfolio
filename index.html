@@ -205,7 +205,7 @@
         <div class="max-w-4xl mx-auto text-center space-y-7">
             <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-panel/80 backdrop-blur-md border border-neon/30 text-neon text-xs font-mono">
                 <span class="h-2 w-2 rounded-full bg-neon animate-ping"></span>
-                <span>SYSTEM ONLINE // AI ORCHESTRATOR & FULL-STACK ENGINEER</span>
+                <span>SYSTEM ONLINE // AI ORCHESTRATOR &amp; FULL-STACK ENGINEER</span>
             </div>
 
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.12]">
@@ -253,7 +253,7 @@
     <section id="projects" data-section="PROJECTS" class="relative z-10 py-24 px-6 border-t border-emerald-950/60">
         <div class="max-w-6xl mx-auto space-y-12">
             <div class="space-y-2">
-                <span class="font-mono text-xs text-cyanNeon uppercase tracking-widest">// PRODUCTION_BUILDS & ARCHITECTURE</span>
+                <span class="font-mono text-xs text-cyanNeon uppercase tracking-widest">// PRODUCTION_BUILDS &amp; ARCHITECTURE</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Systems</h2>
                 <p class="text-zinc-400 text-sm max-w-2xl leading-relaxed pt-1">
                     Full-stack commercial systems designed for performance, fault tolerance, and real-world localization.
@@ -272,29 +272,29 @@
                             <span class="text-zinc-500">Full-Stack Pharmacy</span>
                         </div>
 
-                        <!-- مكان فيديو الديمو بتاع دواك (جاهز تحط فيه لينك اليوتيوب أول ما تسجله) -->
-                        <div class="relative aspect-video w-full rounded-xl overflow-hidden bg-black/60 border border-emerald-900/60 flex flex-col items-center justify-center text-center p-5 group">
-                            <!--
-                            أول ما ترفع فيديو دواك على يوتيوب، امسح الجزء اللي تحت ده وفك الكومنت عن الـ iframe ده وغير YOUR_VIDEO_ID:
-                            <iframe
-                                class="w-full h-full"
-                                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                                title="Dawaak Pharmacy Demo"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                            -->
-                            <div class="w-12 h-12 rounded-full bg-neon/10 border border-neon/30 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
-                                <span class="text-neon text-lg ml-0.5">▶</span>
+                        <!-- إطار المشغل المدمج لمشروع دواك (جاهز تحط فيه Video ID أول ما تسجله) -->
+                        <div class="rounded-xl overflow-hidden bg-black/75 border border-emerald-900/70 shadow-xl">
+                            <div class="px-3.5 py-2 bg-black/80 border-b border-emerald-950 flex items-center justify-between font-mono text-[10px]">
+                                <div class="flex items-center gap-2 text-zinc-400">
+                                    <span class="w-2 h-2 rounded-full bg-neon/60"></span>
+                                    <span>DAWAAK_DEMO.mp4</span>
+                                </div>
+                                <span class="text-zinc-500">SANDBOX_PREVIEW</span>
                             </div>
-                            <span class="font-mono text-xs text-neon tracking-wider">WALKTHROUGH VIDEO // COMING SOON</span>
-                            <p class="text-xs text-zinc-400 mt-1.5 max-w-xs">
-                                Interactive live demo is already online on Vercel — test Arabic fuzzy search, voice search &amp; barcode scanning directly.
-                            </p>
-                            <a href="https://dawaak-pharmacy.vercel.app/" target="_blank" rel="noopener noreferrer" class="mt-3 px-3.5 py-1.5 rounded-lg bg-neon/15 hover:bg-neon hover:text-obsidian text-neon font-mono text-[11px] font-bold border border-neon/30 transition-all">
-                                Launch_Interactive_Demo ↗
-                            </a>
+
+                            <!-- أول ما ترفع الفيديو على يوتيوب، حط data-video-id="ID_الفيديو" وامسح الكلاس hidden من الزرار -->
+                            <div class="relative aspect-video w-full flex flex-col items-center justify-center text-center p-5 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.08),transparent_70%)]">
+                                <div class="w-12 h-12 rounded-full bg-neon/10 border border-neon/35 flex items-center justify-center mb-3">
+                                    <span class="text-neon text-lg ml-0.5">▶</span>
+                                </div>
+                                <span class="font-mono text-xs text-neon tracking-wider">DEMO VIDEO // RECORDING SOON</span>
+                                <p class="text-xs text-zinc-400 mt-1.5 max-w-xs">
+                                    Live interactive sandbox is deployed on Vercel — try Arabic typo-tolerant search, voice search &amp; barcode scanner.
+                                </p>
+                                <a href="https://dawaak-pharmacy.vercel.app/" target="_blank" rel="noopener noreferrer" class="mt-3 px-3.5 py-1.5 rounded-lg bg-neon/15 hover:bg-neon hover:text-obsidian text-neon font-mono text-[11px] font-bold border border-neon/30 transition-all">
+                                    Open_Live_Sandbox ↗
+                                </a>
+                            </div>
                         </div>
 
                         <div class="space-y-2.5">
@@ -332,17 +332,57 @@
                             <span class="text-zinc-500">Multi-Model Engine</span>
                         </div>
 
-                        <!-- مشغل فيديو اليوتيوب المدمج لـ NOVO -->
-                        <div class="aspect-video w-full rounded-xl overflow-hidden bg-black/70 border border-cyan-900/60 shadow-lg">
-                            <iframe
-                                class="w-full h-full"
-                                src="https://www.youtube.com/embed/jgz2fYkeS-A"
-                                title="NOVO Personal AI Workspace Demo"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
+                        <!-- مشغل الفيديو المدمج لـ NOVO (يشتغل جوه البورتفوليو بواجهة مخصصة + زرار يوتيوب) -->
+                        <div class="rounded-xl overflow-hidden bg-black/80 border border-cyan-900/70 shadow-xl">
+                            <!-- شريط علوي يشبه مشغل النظام -->
+                            <div class="px-3.5 py-2 bg-black/85 border-b border-cyan-950/80 flex items-center justify-between font-mono text-[10px]">
+                                <div class="flex items-center gap-2 text-cyanNeon">
+                                    <span class="w-2 h-2 rounded-full bg-cyanNeon animate-pulse"></span>
+                                    <span>NOVO_WALKTHROUGH.mp4</span>
+                                </div>
+                                <a href="https://youtu.be/jgz2fYkeS-A?si=46HejnIsqEnXpbQF" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-1">
+                                    <span>YouTube</span>
+                                    <span>↗</span>
+                                </a>
+                            </div>
+
+                            <!-- حاوية الفيديو التفاعلية -->
+                            <div class="native-video-player relative aspect-video w-full bg-black cursor-pointer group overflow-hidden"
+                                 data-video-id="jgz2fYkeS-A"
+                                 data-title="NOVO Personal AI Workspace Demo">
+                                <!-- صورة الغلاف بجودة عالية مع fallback تلقائي -->
+                                <img src="https://i.ytimg.com/vi/jgz2fYkeS-A/maxresdefault.jpg"
+                                     onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jgz2fYkeS-A/hqdefault.jpg';"
+                                     alt="NOVO AI Workspace Walkthrough"
+                                     class="w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-[1.03] transition-all duration-500" />
+
+                                <!-- طبقة تدرج زجاجي عشان يندمج مع تصميم البورتفوليو -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/35 to-transparent"></div>
+
+                                <!-- زرار التشغيل المخصص في النص -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center gap-2.5">
+                                    <div class="w-16 h-16 rounded-full bg-cyanNeon/20 backdrop-blur-md border border-cyanNeon/70 flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.45)] group-hover:scale-110 group-hover:bg-cyanNeon group-hover:text-obsidian text-cyanNeon transition-all duration-300">
+                                        <svg class="w-7 h-7 ml-1 fill-current" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 font-mono text-[10px] tracking-wider text-zinc-200 group-hover:border-cyanNeon/50 transition-colors">
+                                        PLAY_IN_PORTFOLIO
+                                    </span>
+                                </div>
+
+                                <!-- شريط سفلي خفيف جوه المشغل -->
+                                <div class="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between font-mono text-[10px] text-zinc-400">
+                                    <span class="px-2 py-0.5 rounded bg-black/70 border border-white/5 text-cyanNeon">HD // INLINE STREAM</span>
+                                    <a href="https://youtu.be/jgz2fYkeS-A?si=46HejnIsqEnXpbQF"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       onclick="event.stopPropagation()"
+                                       class="px-2.5 py-0.5 rounded bg-black/75 hover:bg-white/10 border border-white/10 text-zinc-300 hover:text-white transition-colors">
+                                        Watch on YouTube ↗
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="space-y-2.5">
@@ -414,9 +454,32 @@
     </footer>
 
     <!-- =================================================================== -->
-    <!-- LIVE DASHBOARD ENGINE SCRIPT                                        -->
+    <!-- LIVE DASHBOARD & NATIVE VIDEO PLAYER SCRIPT                         -->
     <!-- =================================================================== -->
     <script>
+        // 0. تشغيل الفيديو جوه البورتفوليو عند الضغط على المشغل المخصص
+        document.querySelectorAll('.native-video-player').forEach(player => {
+            player.addEventListener('click', () => {
+                const videoId = player.dataset.videoId;
+                const title = player.dataset.title || 'Project Walkthrough';
+                if (!videoId) return;
+
+                player.classList.remove('cursor-pointer');
+                player.innerHTML = `
+                    <iframe
+                        class="w-full h-full"
+                        src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1"
+                        title="${title}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                `;
+            }, { once: true });
+        });
+
+        // 1. محرك الأكواد الحية في خلفية الداشبورد
         const codeModules = [
             {
                 file: "novo/server.ts",
@@ -562,6 +625,7 @@ CREATE POLICY "Public catalog read-only"
         }
         startTypingModule();
 
+        // 2. رسم بياني موجي لايف
         const sparkLine = document.getElementById('spark-line');
         const sparkArea = document.getElementById('spark-area');
         const latencyEl = document.getElementById('metric-latency');
@@ -594,6 +658,7 @@ CREATE POLICY "Public catalog read-only"
         }, 1100);
         renderSparkline();
 
+        // 3. تدفق أحداث API
         const eventsFeed = document.getElementById('live-events-feed');
         const sampleEvents = [
             { method: "POST", route: "/api/ai/orchestrate", code: "200", color: "text-neon" },
@@ -627,6 +692,7 @@ CREATE POLICY "Public catalog read-only"
         for (let i = 0; i < 4; i++) pushEventRow();
         setInterval(pushEventRow, 2200);
 
+        // 4. تحريك طبقات الداشبورد مع السكرول
         const parallaxCode = document.getElementById('parallax-code-col');
         const parallaxMetrics = document.getElementById('parallax-metrics-col');
         const parallaxGlow = document.getElementById('parallax-glow');
